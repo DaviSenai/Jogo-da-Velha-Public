@@ -1,0 +1,28 @@
+
+#game-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+#statements-container {
+    width: 400px;
+    height: 100vh;
+    background: #bbbbbb;
+    padding: 20px;
+}
+
+#table-container {
+    position: relative;
+    display: flex;
+    width: -webkit-fill-available;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+#table-container #vez {
+    position: absolute;
+    top: 10px;
+}
+

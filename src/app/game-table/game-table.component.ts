@@ -106,7 +106,7 @@ export class GameTableComponent implements OnInit {
   
 }
 
-const Storage = {
+export const Storage = {
   get(key) {
     return JSON.parse(window.localStorage.getItem(key))
   },

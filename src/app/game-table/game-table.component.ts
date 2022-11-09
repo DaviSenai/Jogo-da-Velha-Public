@@ -8,19 +8,22 @@ import { AppComponent } from '../app.component';
 })
 export class GameTableComponent implements OnInit {
 
-  ngOnInit(): void {
-    if (Storage.get("data") == null) {
-      let placar = {xPoints: 0, oPoints: 0}
-      Storage.set("data", placar)
-    }
-  }
-
   tableValues:string[] = ["","","","","","","","",""]
 
   currentPlayer:string = "X"
   winner:string = ""
   xPoints:number = 0;
   oPoints:number = 0;
+  
+  ngOnInit(): void {
+    if (Storage.get("data") == null) {
+      let placar = {xPoints: 0, oPoints: 0}
+      Storage.set("data", placar)
+    }
+	let points = Storage.get("data")
+	document.querySelectorAll("#vitorias span")[0].innerHTML = points.xPoints + ""
+	document.querySelectorAll("#vitorias span")[1].innerHTML = points.oPoints + ""
+  }
 
   
   refreshTable(n:number) {
@@ -28,6 +31,7 @@ export class GameTableComponent implements OnInit {
     if (this.tableValues[n-1] != "" || this.winner != "") {
       return
     }
+
     this.tableValues[n-1] = this.currentPlayer
     let td = document.querySelectorAll("td")[n-1];
     if (this.currentPlayer == "X") {
@@ -50,8 +54,11 @@ export class GameTableComponent implements OnInit {
         this.oPoints++
         temp.oPoints = this.oPoints
       }
+	  console.log(temp)
+	  Storage.set('data', temp)
       document.querySelectorAll("#vitorias span")[0].innerHTML = this.xPoints + ""
       document.querySelectorAll("#vitorias span")[1].innerHTML = this.oPoints + ""
+	  
 
     }
     console.log(this.tableValues)

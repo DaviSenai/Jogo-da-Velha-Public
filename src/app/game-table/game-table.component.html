@@ -18,3 +18,7 @@
     </tr>
   </tbody>
 </table>
+
+<div id="button-container" *ngIf="winner != ''">
+  <button (click)="restart()">Reiniciar</button>
+</div>

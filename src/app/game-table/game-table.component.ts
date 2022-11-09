@@ -15,7 +15,7 @@ export class GameTableComponent implements OnInit {
     }
   }
 
-  tableValues:string[] = ["","","","","","","","","",""]
+  tableValues:string[] = ["","","","","","","","",""]
 
   currentPlayer:string = "X"
   winner:string = ""
@@ -54,7 +54,7 @@ export class GameTableComponent implements OnInit {
       document.querySelectorAll("#vitorias span")[1].innerHTML = this.oPoints + ""
 
     }
-    
+    console.log(this.tableValues)
     let hasAvailableSpace:boolean = false;
     for (let i = 0; i < this.tableValues.length; i++) {
       if (this.tableValues[i] === "") {
@@ -94,7 +94,7 @@ export class GameTableComponent implements OnInit {
 
   restart() {
     this.winner = ""
-    this.tableValues = ["","","","","","","","","",""]
+    this.tableValues = ["","","","","","","","",""]
     let tds = document.querySelectorAll("td")
     for (let i = 0; i < tds.length; i++) {
       tds[i].innerHTML = ""

@@ -4,12 +4,16 @@
   <section id="statements-container">
     <div id="vitorias">
       <h3>Vitórias</h3>
-      <p>Jogador_1: <span>2</span></p>
-      <p>Jogador_2: <span>3</span></p>
+      <div>
+        <p>Jogador_1</p><span>2</span>
+      </div>
+      <div>
+        <p>Jogador_2</p><span>3</span>
+      </div>
     </div>
   </section>
   <section id="table-container">
-    <h2 id="vez">Vez de {{"Jogador_1"}}</h2>
+    <h2 id="vez">Vez de <span>{{jogadorAtual}}</span></h2>
     <app-game-table></app-game-table>
   </section>
 </section>

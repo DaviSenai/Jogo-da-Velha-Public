@@ -9,7 +9,10 @@
     width: 400px;
     height: 100vh;
     background: #bbbbbb;
-    padding: 20px;
+}
+
+#statements-container div {
+    margin: 20px;
 }
 
 #table-container {
@@ -24,5 +27,28 @@
 #table-container #vez {
     position: absolute;
     top: 10px;
+}
+
+#vitorias div {
+    display: flex;
+    align-items: center;
+}
+
+#vitorias div p {
+    color: #0767f7;
+    margin: 0 4px 0 0;
+    font-weight: 700;
+}
+
+#vitorias div:last-child p {
+    color: #ffcc00;
+}
+
+#vitorias div p:hover {
+    cursor: text;
+}
+
+#vitorias div p::after {
+    content: ":";
 }
 

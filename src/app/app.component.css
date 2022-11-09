@@ -34,11 +34,6 @@
     align-items: center;
 }
 
-#table-container #vez {
-    position: absolute;
-    top: 10px;
-}
-
 #vitorias div {
     display: flex;
     align-items: center;

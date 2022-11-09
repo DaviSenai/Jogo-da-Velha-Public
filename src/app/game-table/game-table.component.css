@@ -1,4 +1,18 @@
 
+#table-container {
+    position: relative;
+    display: flex;
+    width: -webkit-fill-available;
+    justify-content: center;
+    align-items: center;
+}
+
+#vez {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
 
 table {
     width: 450px;

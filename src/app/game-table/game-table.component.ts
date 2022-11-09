@@ -8,7 +8,7 @@ import { jogadorAtual } from '../app.component';
 })
 export class GameTableComponent {
 
-  tableValues:string[] = ["","","","","","","","",""]
+  tableValues:string[] = ["","","","","","","","","",""]
 
 
   refreshTable(n:number) {
